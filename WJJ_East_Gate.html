@@ -1,0 +1,113 @@
+<<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport"
+        content="width=350, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0, user-scalable=no;">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="Wed, 26 Feb 2007 08:21:57 GMT">
+    <title>郑州大学数据中台2020</title>
+    <link rel="stylesheet" type="text/css" href="https://jksb.v.zzu.edu.cn/imagesss/_xwss_2017.css">
+    <style>
+        #bak_0 {
+            MARGIN: 0 auto;
+            left: 0;
+            WIDTH: 350px;
+            min-HEIGHT: 540px;
+        }
+    </style>
+
+    <script>
+        var countdown = function (fenTime, miaoTime) {
+            var fen = document.getElementById("fen");
+            var miao = document.getElementById("miao");
+            if (!!fen) {
+                fen.innerHTML = fenTime;
+                miao.innerHTML = miaoTime;
+                if (miaoTime == 0) {
+                    fenTime = fenTime - 1;
+                    miaoTime = 59;
+                }
+                miaoTime--;
+                setTimeout(function () {
+                    countdown(fenTime, miaoTime);
+                }, 1000);
+            }
+        }
+        function init() {
+            countdown(9, 59);
+            getD1();
+        }
+
+        function getD1() {
+            var date = new Date();
+            var d1 = date.toLocaleString();
+            var div1 = document.getElementById("times");
+            var yue = (date.getMonth() + 1).toString();
+            var ri = (date.getDate() ).toString();
+            if (ri.length < 2) ri = '0' + ri;
+            var hour = (date.getHours()).toString();
+            var fen = (date.getMinutes()).toString();
+            if (fen.length < 2) fen = '0' + fen;
+            var date_format = yue + "月" + ri + "日 " + hour + ":" + fen;
+            div1.innerHTML = date_format;
+
+        }
+
+        setInterval("getD1();", 60 * 1000);
+    </script>
+
+</head>
+
+<body onload=init();>
+    <form method="POST" name="myform52"
+        action="https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/gettongxing?ptopid=s1571C6783C104FA997713E309FF4C9BC&amp;door=6310&amp;sid=201003131940375557">
+        <div id="bak_0">
+            <div style="WIDTH: 100%; HEIGHT: 102px;background:url(https://jksb.v.zzu.edu.cn/imagesss/title316b.png);">
+                <div style="width:100%;height:32px;line-height:32px;text-align:right"><a
+                        href="https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/logout?ptopid=s1571C6783C104FA997713E309FF4C9BC"><span
+                            style="color:#00c;">〖切换账号〗</span></a>　</div>
+            </div>
+            <div style="width:100%;height:7px;BACKGROUND-IMAGE: url(/images/split5.png)"></div>
+            <div style="WIDTH: 100%; HEIGHT: 102px;">
+                <div style="width:100%;height:32%;line-height:32px;text-align:left;"><span
+                        style="font-size:13px;color:	#333;">获取时间:</span><span id="times"
+                     style="font-size:16px;color:#a0a;font-weight:500;"></span>
+                    <span
+                        style="width:100%;height:32%;line-height:32px;text-align:right;"></span>
+                    <span
+                        style="font-size:13px;color:#333;">有效期剩余 </span>
+                    <span id="tim317"
+                        style="font-size:22px;color:#c00;font-weight:1000;font-family:黑体;"><span id="fen"></span>分<span
+                            id="miao"></span>秒</span>　　</div>
+                <div style="width:100%;height:7px;BACKGROUND-IMAGE: url(/images/split5.png)"></div>
+                <div style="width:100%;min-height:25px;line-height:25px;font-size:14px;color:#333"><img
+                        src="https://xwss6.v.zzu.edu.cn/yan2vm/7/7F19AA3FE77C49A3ACB113B382FD245D.jpg?sid=210618143113455619"
+                        style="width:350px;border:0px;"></div>
+                <div style="width:100%;height:7px;BACKGROUND-IMAGE: url(/images/split5.png)"><br>
+                      <span style="width:100%;min-height:24px;line-height:24px;font-size:17px;color:#00c;font-weight:700;font-family:宋体;text-align:center;"></span>
+
+                <br>
+                    <div style="width:100%;min-height:25px;line-height:25px;font-size:18px;color:#00c;font-weight:500;font-family:黑体;">
+                    　<span style="color:#00a">电气工程学院 王娟娟</span><br>　通行信息：主校区大门东门.入口<br>　出入身份：郑州大学硕士研究生<br />　<span style="color:#f00">提醒：未检索到你今天的出校记录</span></div>
+                <div style="width:100%;height:7px;BACKGROUND-IMAGE: url(/images/split5.png)"></div>
+                <div style="width:100%;min-height:18px;line-height:18px;font-size:12px;color:#666;text-align:center">
+                    郑州大学疫情防控领导小组、保卫处、信息化办公室</div>
+
+            </div>
+
+            <div style="width:1px;height:1px;">
+                <iframe name="zzj_fun_426" id="zzj_fun_426s"
+                    src="cid:frame-0C481473563EEE147A10B0B404607994@mhtml.blink" marginwidth="0" marginheight="0"
+                    height="100%" width="100%" scrolling="no" border="0" frameborder="0"
+                    allowtransparency="true"></iframe>
+            </div>
+
+
+            <div style="width:100%;height:50px;"></div>
+
+        </div>
+    </form>
+</body>
+</html>
